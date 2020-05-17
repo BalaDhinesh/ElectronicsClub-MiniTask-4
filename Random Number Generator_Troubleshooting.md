@@ -28,3 +28,34 @@ Make sure that you wired the connections properly from [this](https://components
 Check the continuity between terminals using multimeter. If there is any problem with the continuity or if the IC circuit looks hot, your IC4026 7 segment decoder has to be changed. Again, check in the resources section to get a new one.
 
 ## LED seven segment display:
+Connect the seven segment with the Arduino and set all the seven segments to high and see if everything lights up.
+
+![Diagram](https://i.stack.imgur.com/rCOCX.png)
+
+__Code:__
+
+    void setup() {  
+      for (int pin = 2 ; pin < 9 ; pin++){ // setup pins 2 – 8 to be output   
+        pinMode(pin, OUTPUT);
+     }   
+
+      for (int pin = 2 ; pin < 9 ; pin++){ // turn on pins 2 - 8    
+       digitalWrite(pin, HIGH);  
+     }
+    }
+
+    void loop(){}
+
+If any problem in lighting up, the display is faulty and need to consider buyina a new one.
+
+
+
+## Resources:
+
+1.Push button: [Click here to buy](https://robu.in/product/12x12x7-3mm-tactile-push-button-switch-round/?gclid=CjwKCAjwwYP2BRBGEiwAkoBpAtP5RYjXq6l3DhaUoF91_NNI3YSLRuD4TGb4YjkBEP97RONsnN3swBoCIV0QAvD_BwE)
+
+2.555 timer: [Click here to buy](https://bm-es.com/product/555-timer-ic/?gclid=CjwKCAjwwYP2BRBGEiwAkoBpAh34yk24zKgEE_DWjDcyDB_O2NDKj9_uXp3JlTHtUTwMmdxIwKZaRBoCyDkQAvD_BwE)
+
+3.IC 4026: [Click here to buy](https://www.dnatechindia.com/cd-4026-7-segment-decade-counter-buy-india.html)
+
+4.LED seven segment display: [Click here to buy](https://robu.in/product/tm1637-4-bits-digital-tube-led-display-module-clock-display-arduino/?gclid=CjwKCAjwwYP2BRBGEiwAkoBpApe6dodPmq_DUCWfi9P8y95t0fn96khu7-hkSkLQRYQIKfUx08uIehoCW1cQAvD_BwE)
